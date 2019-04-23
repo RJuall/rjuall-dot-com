@@ -5,6 +5,7 @@ module.exports = {
     title: `RJuall Dot Com`,
     description: `Robert Juall's personal portfolio site`,
     author: `@rjuall`,
+    url: `stupefied-bhaskara-bea81a.netlify.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -46,5 +47,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    `gatsby-plugin-netlify`
   ],
 }
