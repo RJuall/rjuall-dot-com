@@ -1,11 +1,27 @@
+const mdxFeed = require("gatsby-mdx/feed");
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Setup Gatsby Test`,
+    description: `Let's see if I can get everything set up?`,
     author: `@rjuall`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-tslint`,
+    `gatsby-mdx`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: mdxFeed,
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src`
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -13,13 +29,20 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `setup-gatsby-test`,
+        short_name: `testSetup`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

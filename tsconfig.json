@@ -1,0 +1,17 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "jsx":  "react",
+        "sourceMap": true,
+        "lib": ["dom", "es2015", "es2017"],
+        "strict": true,
+        "noImplicitAny": true,
+        "allowJs": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "experimentalDecorators": true,
+    },
+    "include": ["./src/**/*"]
+}
