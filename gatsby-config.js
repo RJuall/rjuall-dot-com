@@ -2,8 +2,8 @@ const mdxFeed = require("gatsby-mdx/feed");
 
 module.exports = {
   siteMetadata: {
-    title: `Setup Gatsby Test`,
-    description: `Let's see if I can get everything set up?`,
+    title: `RJuall Dot Com`,
+    description: `Robert Juall's personal portfolio site`,
     author: `@rjuall`,
   },
   plugins: [
@@ -14,13 +14,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-feed`,
       options: mdxFeed,
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `src`,
-        path: `${__dirname}/src`
-      },
     },
     {
       resolve: `gatsby-source-filesystem`,
