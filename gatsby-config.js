@@ -5,7 +5,7 @@ module.exports = {
     title: `RJuall Dot Com`,
     description: `Robert Juall's personal portfolio site`,
     author: `@rjuall`,
-    siteUrl: `stupefied-bhaskara-bea81a.netlify.com`,
+    siteUrl: `https://stupefied-bhaskara-bea81a.netlify.com/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
