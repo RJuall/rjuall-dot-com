@@ -4,4 +4,20 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
+ // https://reacttraining.com/blog/gatsby-mdx-blog/
+const { createFilePath } = require('gatsby-source-filesystem');
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+    const { createNodeField } = actions
+    if (node.internal.type === 'Mdx') {
+        const value = createFilePath({ node, getNode })
+        createNodeField({
+            // Individual MDX node
+            node,
+            // Name of the added field
+            name: 'slug',
+            // Generated value based on filepath with 'blog' prefix
+            value: `/blog${value}`
+        })
+    }
+}
