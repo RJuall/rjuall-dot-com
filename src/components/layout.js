@@ -10,7 +10,8 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-//import "./layout.css"
+
+import 'spectre.css'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -32,6 +33,7 @@ const Layout = ({ children }) => (
             © {new Date().getFullYear()}, Built with
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
+            <button className="btn btn-primary">Primary Button</button>
           </footer>
         </div>
       </>
