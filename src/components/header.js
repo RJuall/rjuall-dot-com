@@ -24,6 +24,7 @@ const Header = ({ siteTitle }) => (
             textShadow: `none`,
             backgroundImage: `none`,
           }}
+          className="heading"
         >
           {siteTitle}
         </Link>

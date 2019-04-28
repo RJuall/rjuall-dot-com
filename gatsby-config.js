@@ -2,7 +2,7 @@ const mdxFeed = require("gatsby-mdx/feed");
 
 module.exports = {
   siteMetadata: {
-    title: `RJuall Dot Com`,
+    title: `Robert Juall`,
     description: `Robert Juall's personal portfolio site`,
     author: `@rjuall`,
     siteUrl: `https://stupefied-bhaskara-bea81a.netlify.com/`,
@@ -36,8 +36,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `setup-gatsby-test`,
-        short_name: `testSetup`,
+        name: `Robert Juall's Portfolio Site`,
+        short_name: `RJuall`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

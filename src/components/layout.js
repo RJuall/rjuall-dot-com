@@ -11,7 +11,28 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 
+import { Global, css } from '@emotion/core'
 import 'spectre.css'
+require('typeface-arvo')
+require('typeface-cabin')
+
+const globalFontStyles = {
+  'h1, h2, h3, h4, h5, h6, .heading': {
+    fontFamily: `'Arvo', serif`,
+    fontWeight: `700`,
+    letterSpacing: `0.025em`,
+    wordSpacing: `0.1em`,
+    lineHeight: `1.5em`,
+  },
+  '*': {
+    fontFamily: `'Cabin', sans-serif`,
+    fontSize: `1.1rem`,
+    fontWeight: `400`,
+    letterSpacing: `0.05em`,
+    wordSpacing: `0.15em`,
+    lineHeight: `1.35em`,
+  },
+}
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -26,6 +47,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+        <Global styles={globalFontStyles}/>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div>
           <main>{children}</main>
@@ -33,7 +55,6 @@ const Layout = ({ children }) => (
             © {new Date().getFullYear()}, Built with
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
-            <button className="btn btn-primary">Primary Button</button>
           </footer>
         </div>
       </>
